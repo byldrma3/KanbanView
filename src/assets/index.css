@@ -23,10 +23,13 @@
 		transition: translate 0.375s cubic-bezier(0.175, 0.885, 0.32, 1);
 		@apply flex h-screen w-[285px] flex-col justify-between bg-white px-3 py-6;
 	}
-	body.open::after {
+	body.open::before {
 		content: "";
 		z-index: 1;
-		@apply absolute left-0 top-0 h-screen w-full bg-black/20;
+		@apply absolute left-0 top-0 h-full w-full bg-black/20;
+	}
+	body.open {
+		@apply overflow-hidden;
 	}
 	body.open .sidebar-mobile {
 		opacity: 1;
