@@ -25,12 +25,24 @@ export default function Root() {
 	const handleAddNewTask = () => {
 		setSubmitLoading(true);
 		if (newTaskForm.columnId === "") {
-			toast.error("Please choose a column first");
+			toast.error("Please choose a column first", {
+				style: {
+					fontSize: "13px",
+					borderRadius: "6px",
+					color: "#001747",
+				},
+			});
 			setSubmitLoading(false);
 			return;
 		}
 		if (newTaskForm.task === "") {
-			toast.error("Please enter a task name first");
+			toast.error("Please enter a task name first", {
+				style: {
+					fontSize: "13px",
+					borderRadius: "6px",
+					color: "#001747",
+				},
+			});
 			setSubmitLoading(false);
 			return;
 		}
