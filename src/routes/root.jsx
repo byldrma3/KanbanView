@@ -35,7 +35,7 @@ export default function Root() {
 			setSubmitLoading(false);
 			return;
 		}
-		if (newTaskForm.task === "") {
+		if (newTaskForm.task.trim() === "") {
 			toast.error("Please enter a task name first", {
 				style: {
 					fontSize: "13px",
