@@ -6,7 +6,7 @@ export function Modal({ onClose, isOpen, children, title }) {
 		<AnimatePresence>
 			{isOpen && (
 				<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.15 }} tabIndex='-1' className={`montserrat fixed left-0 right-0 top-0 z-50  flex h-full w-full items-center justify-center overflow-y-auto overflow-x-hidden bg-black/20 p-4 backdrop-blur-sm md:inset-0`}>
-					<motion.div initial={{ scale: 0.9 }} animate={{ scale: 1 }} exit={{ scale: 0.9 }} transition={{ duration: 0.15 }} className='relative h-full  w-full max-w-2xl md:h-auto'>
+					<motion.div initial={{ scale: 0.9 }} animate={{ scale: 1 }} exit={{ scale: 0.9 }} transition={{ duration: 0.15 }} className='relative h-full w-full max-w-2xl'>
 						<div className='relative rounded-lg bg-white'>
 							<div className='flex items-start justify-between border-b border-line p-4'>
 								<h3 className='text-base font-semibold text-[#001747]'>{title}</h3>
