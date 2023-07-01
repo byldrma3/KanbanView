@@ -14,6 +14,35 @@
 		height: calc(100vh - 57px);
 		@apply hidden w-[185px] flex-col justify-between px-3 py-6 lg:flex;
 	}
+	.sidebar-mobile {
+		z-index: 2;
+		top: 0;
+		left: 0;
+		position: fixed;
+		translate: -100% 0;
+		transition: translate 0.375s cubic-bezier(0.175, 0.885, 0.32, 1);
+		@apply flex h-screen w-[285px] flex-col justify-between bg-white px-3 py-6;
+	}
+	body.open::after {
+		content: "";
+		z-index: 1;
+		@apply absolute left-0 top-0 h-screen w-full bg-black/20;
+	}
+	body.open .sidebar-mobile {
+		opacity: 1;
+		visibility: visible;
+		translate: 0;
+		animation: menu-in 0.375s;
+	}
+	@keyframes menu-in {
+		0% {
+			clip-path: ellipse(60% 60% at 0% 50%);
+		}
+		100% {
+			clip-path: ellipse(120% 120% at 0% 50%);
+		}
+	}
+
 	.form-label {
 		@apply flex items-center gap-1 rounded-[4px] bg-[rgba(140,151,172,0.07)] p-2;
 	}
@@ -44,6 +73,9 @@
 	}
 	.btn.secondary {
 		@apply bg-[rgba(140,151,172,0.07)] text-[#8C97AC] hover:bg-[#8C97AC]/10 focus:ring-2 focus:ring-[#8C97AC]/20;
+	}
+	.btn.danger {
+		@apply bg-[#FF6464] text-white hover:bg-[#FF6464]/70 focus:ring-2 focus:ring-[#FF6464]/20;
 	}
 	.btn.bordered {
 		@apply border border-brand bg-transparent px-1 py-[2px] text-brand hover:bg-brand/10 focus:ring-2 focus:ring-brand/20;

@@ -5,9 +5,17 @@ import { Link } from "react-router-dom";
 
 // eslint-disable-next-line react/prop-types
 const Header = ({ onOpen }) => {
+	const handleMenu = () => {
+		document.body.classList.toggle("open");
+	};
 	return (
 		<header className='box-border flex border-b border-line py-3'>
-			<div className='border-r border-line pl-[14px] pr-[17px]'>
+			<div className='block pl-[14px] pr-[17px] sm:border-r sm:border-line  lg:hidden'>
+				<Button variant='secondary' size='sm' onClick={handleMenu}>
+					<Icon icon='menu' className='px-[5px]' />
+				</Button>
+			</div>
+			<div className='hidden pl-[14px] pr-[17px] lg:block lg:border-r lg:border-line'>
 				<Link to='/'>
 					<img src='/logo.svg' alt='Producter Logo' className='h-[32px]' />
 				</Link>

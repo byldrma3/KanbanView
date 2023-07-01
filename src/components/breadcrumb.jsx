@@ -11,7 +11,7 @@ const Breadcrumb = () => {
 	return (
 		<div className='breadcrumb'>
 			<div className='flex flex-shrink-0 flex-grow  gap-2'>
-				<div className='flex items-center border-r border-line-dark pr-4'>
+				<div className='flex items-center pr-4 sm:border-r sm:border-line-dark'>
 					<Link to='/'>
 						<ArrowLeftIcon size='24' />
 					</Link>
