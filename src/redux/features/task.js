@@ -2,12 +2,12 @@ import { createSlice } from "@reduxjs/toolkit";
 import { v4 as uuid } from "uuid";
 
 const itemsFromBackend = [
-	{ id: uuid(), content: "First task" },
-	{ id: uuid(), content: "Second task" },
-	{ id: uuid(), content: "Third task" },
-	{ id: uuid(), content: "Fourth task" },
-	{ id: uuid(), content: "Fifth task" },
-	{ id: uuid(), content: "Sixth task" },
+	{ id: uuid(), content: "Documentation Preparation" },
+	{ id: uuid(), content: "Meeting Organization" },
+	{ id: uuid(), content: "Market Research" },
+	{ id: uuid(), content: "Project Analysis" },
+	{ id: uuid(), content: "Report Generation" },
+	{ id: uuid(), content: "Data Analysis" },
 ];
 
 const columnsFromBackend = {

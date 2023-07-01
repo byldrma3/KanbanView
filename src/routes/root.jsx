@@ -24,6 +24,16 @@ export default function Root() {
 
 	const handleAddNewTask = () => {
 		setSubmitLoading(true);
+		if (newTaskForm.columnId === "") {
+			toast.error("Please choose a column first");
+			setSubmitLoading(false);
+			return;
+		}
+		if (newTaskForm.task === "") {
+			toast.error("Please enter a task name first");
+			setSubmitLoading(false);
+			return;
+		}
 		setTimeout(() => {
 			dispatch(
 				addTask({
